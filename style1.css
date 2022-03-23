@@ -1,0 +1,668 @@
+/***General***/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.margin {
+    margin: 2em 2em 1em;
+}
+
+p {
+    font-family: 'Fredoka', sans-serif;
+}
+
+/***Header***/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgreen;
+    padding: 2em 0;
+    margin: 2em 0;
+    /*height: 7.167rem;*/
+    height: 200px;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style-type: none;
+    height: 100%;
+    background-color: blue;
+}
+
+.navbar-links li:hover {
+    background-color: green;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 1rem;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+    /*margin: 1.5em .5rem;*/
+    background-color: green;
+}
+
+.toggle-button {
+    position: absolute;
+    top: 2.75rem;
+    right: 1rem;
+    /*margin: 2.5em 0;*/
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+@media only screen and (max-width: 39em) {
+    .toggle-button {
+        display: flex;
+    }
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+    .navbar-links li {
+        text-align: center;
+    }
+    .navbar-links li a {
+        padding: .5rem 1rem;
+    }
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: black;
+    border-radius: 10px;
+}
+
+/***EINLEITUNG LANDING PAGE***/
+
+h1,h2,h3 {
+    text-align: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+h2.subtitle {
+    margin-bottom: 1em;
+}
+
+span.formation {
+    display: block;
+    margin-bottom: 1em;
+}
+
+@media only screen and (min-width: 40em) {
+     span.formation {
+         display: inline-block;
+     }
+}
+
+h2.inspiration {
+    margin-bottom: 2em;
+}
+
+/***WOHNZIMMER MIT PFLANZEN BILDER***/
+
+/***Container***/
+
+/***Klein***/
+
+.container-wohnzimmer {
+        display: grid;
+        justify-items: center;
+        gap: 0.5em;
+        margin: 1em auto;
+    }
+
+.container-wohnzimmer p {
+    font-size: 0.9em;
+    font-style: italic;
+    position: relative;
+    bottom: 0.5em;
+}
+
+/***Mittel***/ 
+@media only screen and (min-width: 40em) {
+    .container-wohnzimmer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 1.5em;
+    }
+}
+/***Groß***/
+
+@media only screen and (min-width: 60em) {
+    .container-wohnzimmer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
+    }
+}
+
+/***Einzelne Wohnzimmer-Bilder***/
+
+/***Alle p, Wohnzimmer 1&2***/
+
+@media only screen and (min-width: 40em) {
+    .container-wohnzimmer p {
+        align-self: end;
+    }
+    .wohnzimmer1 {
+        grid-row-start: 1;
+        grid-column-start: 1;
+   }
+    p.wohnzimmer1 {
+    position: relative;
+    bottom: 14%;
+}
+    .wohnzimmer2 {
+    grid-row-start: 1;
+    grid-column-start: 2;
+}
+    p.wohnzimmer2 {
+    position: relative;
+    top: 1em;
+}
+}
+
+/***Wohnzimmer 3***/
+
+@media only screen and (min-width: 40em) {
+    .wohnzimmer3 {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+    p.wohnzimmer3 {
+        position: relative;
+        top: 1em;
+     }
+}
+
+@media only screen and (min-width: 60em) {
+    .wohnzimmer3 {
+        grid-row-start: 1;
+        grid-column-start: 3;
+    }
+}
+
+/***Wohnzimmer 4***/
+
+@media only screen and (min-width: 40em) {
+    .wohnzimmer4 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .wohnzimmer4 {
+        grid-row-start: 2;
+        grid-column-start: 1;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    p.wohnzimmer4 {
+       position: relative;
+       bottom: 7%;
+   }
+}
+
+@media only screen and (min-width: 60em) {
+    p.wohnzimmer4 {
+       position: relative;
+       bottom: 6%;
+   }
+}
+
+/***Wohnzimmer 5 ***/
+
+@media only screen and (min-width: 40em) {
+    .wohnzimmer5 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .wohnzimmer5 {
+        grid-row-start: 2;
+        grid-column-start: 2;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    p.wohnzimmer5 {
+       position: relative;
+       top: 1em;
+   }
+}
+
+/***Wohnzimmer 6***/
+
+@media only screen and (min-width: 40em) {
+    .wohnzimmer6 {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .wohnzimmer6 {
+        grid-row-start: 2;
+        grid-column-start: 3;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    p.wohnzimmer6 {
+       position: relative;
+       bottom: 7.5%;
+   }
+}
+
+@media only screen and (min-width: 60em) {
+    p.wohnzimmer6 {
+       position: relative;
+       bottom: 7%;
+   }
+}
+
+/***Wohnzimmer 7***/
+
+@media only screen and (min-width: 40em){
+    .wohnzimmer7 {
+        grid-row-start: 4;
+        grid-column-start: 1;
+    }
+}
+
+@media only screen and (min-width: 60em){
+    .wohnzimmer7 {
+        grid-row-start: 3;
+        grid-column-start: 1;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    p.wohnzimmer7 {
+       position: relative;
+       top: 0.75em;
+   }
+}
+
+/***Wohnzimmer 8***/
+
+@media only screen and (min-width: 40em) {
+    .wohnzimmer8 {
+        grid-row-start: 4;
+        grid-column-start: 2;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .wohnzimmer8 {
+        grid-row-start: 3;
+        grid-column-start: 2;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    p.wohnzimmer8 {
+       position: relative;
+       top: 1em;
+   }
+}
+
+/***Wohnzimmer 9***/
+
+@media only screen and (min-width: 40em) {
+    .wohnzimmer9 {
+        display: grid;
+        grid-row-start: 5;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        justify-self: center;
+        width: 40%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .wohnzimmer9 {
+        grid-row-start: 3;
+        grid-column-start: 3;
+        width: 75%;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 40em) {
+    p.wohnzimmer9 {
+       text-align: center;
+       position: relative;
+       top: 1em;
+   }
+}
+
+@media only screen and (min-width: 60em) {
+    p.wohnzimmer9 {
+       text-align: center;
+       display: grid;
+       align-self: center;
+       position: relative;
+       top: 32.5%;
+   }
+}
+
+/******** Sechs Pflanzen*************/
+
+h2.top6 {
+    margin: 3em 1em;
+    text-transform: uppercase;
+}
+
+/***Klein***/
+.container6 {
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+    margin: 1em auto;
+}
+
+/***Mittel***/
+@media only screen and (min-width: 35em) {
+    .container6 img {
+        width: 40%;
+    }
+}
+
+/***Desktop***/
+@media only screen and (min-width: 60em) {
+    .container6 img {
+        width: 25%;
+    }
+}
+
+.container6 h3 {
+    text-transform: uppercase;
+}
+
+.container6 p {
+    text-align: center;
+    width: 75%;
+}
+
+@media only screen and (min-width: 35em) {
+    .container6 p {
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+    .container6 p {
+        width: 25%;
+    }
+}
+
+/***Text unterhalb Pflanzen***/
+
+div.green {
+    background-color: lightgreen;
+}
+
+p.green {
+    padding: 1em 2em;
+    text-align: center;
+}
+
+@media only screen and (min-width: 60em) {
+    p.green {
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+/**Beginn Container "Qual der Wahl"**/
+
+.containerQDW {
+    display: grid;
+    grid-template-columns: 1fr 75% 1fr;
+    justify-items: center;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media only screen and (min-width: 60em) {
+    .containerQDW {
+        display: grid;
+        grid-template-columns: 1fr 75% 1fr;
+        justify-items: center;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+p.anrufen {
+    grid-column-start: 2;
+}
+
+/***DIY/ Flaschengarten***/
+
+h2.diy {
+    text-transform: uppercase;
+    margin: 1em 0;
+    grid-row-start: 2;
+    grid-column-start: 2;
+}
+
+/***Großes rundes Flaschengarten-Bild***/
+
+img.diy1 {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border-radius: 50%;
+}
+
+@media only screen and (min-width: 35em) {
+    img.diy1 {
+        display: grid;
+        justify-self: center;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 60em) {
+     img.diy1 {
+         display: grid;
+         justify-self: center;
+         grid-column-start: 2;
+         grid-column-end: 3;
+         width: 75%;
+     }
+}
+
+/***Schrift auf Bild***/
+
+.flaschengarten {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    align-self: center;
+    font-family: 'Inspiration', cursive;
+    margin: 1em 0;
+    font-size: 4rem;
+    color: #adff2f;
+    position: relative;
+    z-index: 10;
+}
+
+h2.ewig {
+    grid-row-start: 4;
+    grid-column-start: 2;
+    margin: 1em auto;
+    text-transform: uppercase;
+}
+
+@media only screen and (min-width: 60em) {
+    h2.ewig {
+        font-size: 1.5rem;
+    }
+}
+
+article.garten p {
+    display: block;
+    margin: 1em 0;
+}
+
+/***Text Flaschengarten***/
+
+article.garten {
+    grid-row-start: 5;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+@media only screen and (min-width: 60em) {
+    article.garten {
+        width: 65%;
+    }
+}
+
+@media only screen and (min-width: 65em) {
+    article.garten {
+        width: 60%;
+    }
+}
+
+@media only screen and (min-width: 70em) {
+    article.garten {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 80em) {
+    article.garten {
+        width: 47.5%;
+    }
+}
+
+/***Ende der Seite***/
+
+h2.wie {
+    grid-row-start: 6;
+    grid-column-start: 2;
+    margin-top: 1em;
+}
+
+h3.wie {
+    grid-row-start: 7;
+    grid-column-start: 2;
+    margin: 1em 0 1.5em;
+}
+
+/***Footer***/
+
+/***Hintergrundbild***/
+
+.banner {
+background-image: url("https://github.com/ChristophGrothe/home_plants/blob/main/flaschengarten/Screenshot%202022-03-19%20at%2016-19-41%20%23livingroomplants%20hashtag%20on%20Instagram%20%E2%80%A2%20Photos%20and%20Videos.png?raw=true");
+padding: 0 1em;
+height: 14em;
+background-size: cover;
+white-space: pre-line;
+text-align: center;
+position: relative;
+font-family: 'Fredoka', sans-serif;
+}
+
+/***Hellgrüne Folie über Bilder***/
+
+.banner::after {
+    content: "";
+    background-color: lightgreen;
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.75;
+}
+
+/***Nötig zwecks Position der Folie***/
+
+.banner > * {
+    position: relative;
+    z-index: 10;
+}
+
+@media only screen and (min-width: 40em) {
+       .banner {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           text-align:unset;
+       }
+}
+
+/***Text***/
+
+@media only screen and (min-width: 40em) {
+        footer div {
+            margin: 3em;
+            position: relative;
+            left: 3.5em;
+        }
+}
+
+@media only screen and (min-width: 60em) {
+        footer div {
+            margin: 3em;
+            position: relative;
+            left: 7em;
+        }
+}
+
+
+
+
+
